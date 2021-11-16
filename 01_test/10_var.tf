@@ -63,6 +63,11 @@ variable "private_ip" {
   #default = "10.0.0.11"
 }
 
+variable "ami_amazon_linux" {
+  type = string
+  #default = "ami-04e8dfc09b22389ad"
+}
+
 variable "protocol_ssh" {
   type = string
   #default = "ssh"
