@@ -1,0 +1,39 @@
+module "stage" {
+  source = "../01_test"
+
+  name   = "shnam"
+  region = "ap-northeast-3"
+  ava    = ["a", "c"]
+  key    = "shnam2-key"
+  key_file = "../../.ssh/shnam-key.pub"
+  install_sh = "./install.sh"
+  cidr_main = "192.168.0.0/16"
+  cidr_public = ["192.168.0.0/24", "192.168.2.0/24"]
+  cidr_private = ["192.168.1.0/24", "192.168.3.0/24"]
+  cidr_privatedb = ["192.168.4.0/24", "192.168.5.0/24"]
+  cidr_route = "0.0.0.0/0"
+  cidr_ipv6 = "::/0"
+  private_ip = "10.0.0.11"
+  protocol_ssh = "ssh"
+  port_ssh = 22
+  protocol_http = "http"
+  protocol_http1 = "HTTP"
+  port_http = 80
+  db_name = "mysql"
+  port_mysql = 3306
+  protocol_tcp = "tcp"
+  protocol_icmp = "icmp"
+  port_zero = 0
+  protocol_minus = "-1"
+  instance = "t3.small"
+  strategy = "cluster"
+  storage_size = 20
+  storage_type = "gp2"
+  sql_engine = "mysql"
+  mysql_version = "8.0"
+  instance_db = "db.t3.micro"
+  name_db = "test"
+  username = "admin"
+  password = "It12345!"
+  ami_amazon_linux = "ami-0d9649ef6deb663a7"
+}
