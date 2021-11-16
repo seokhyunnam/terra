@@ -35,4 +35,5 @@ module "stage" {
   name_db = "test"
   username = "admin"
   password = "It12345!"
+  ami_amazon_linux = "ami-04e8dfc09b22389ad"
 }
