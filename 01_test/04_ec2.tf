@@ -87,7 +87,7 @@ resource "aws_security_group" "shnam_sg" {
 # }
 
 resource "aws_instance" "shnam_web" {
-  ami               = "ami-04e8dfc09b22389ad" #"ami-04e8dfc09b22389ad"
+  ami               = var.ami_amazon_linux #"ami-04e8dfc09b22389ad"
   instance_type     = var.instance
   key_name          = var.key
   availability_zone = "${var.region}${var.ava[0]}"
